@@ -1,0 +1,72 @@
+:root{
+    --primary-color: #fedc00;
+    --icon-color: #252525;
+
+}
+
+body{
+    display: grid;
+    grid-template-areas: "content";
+    font-family: "Ubuntu", sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+header{
+    grid-area: content;
+    place-self: start center;
+    max-width: 1200px;
+    width: 100%;
+    z-index: 666;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    margin-top: 48px;
+
+}
+
+main{
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section{
+    height: 100vh;
+}
+
+
+footer{
+    grid-area: content;
+    place-self: end center;
+    width: 100%;
+    height: 100px;
+    background-color: #0005;
+    border-top: 2px solid #252525;
+    display: grid;
+    place-content: center;
+    font-size: .75rem;
+    text-decoration-line: underline;
+}
+
+.voltar{
+    position: fixed;
+    display: grid;
+    bottom: 16px;
+    right: 16px;
+    place-content: center;
+    font-size: 2.5rem;
+    transition: all .5s;
+    
+}
+
+.voltar:hover{
+    color: var(--primary-color);
+    transition: all .5s;
+}
+
+.header-menu{
+    display: none;
+}
+

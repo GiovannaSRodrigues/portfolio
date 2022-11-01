@@ -1,0 +1,107 @@
+@media(max-width:960px) {
+
+.profile{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.profile__text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-menu{
+    display: block;
+    font-size: 2.5rem;
+
+}
+
+.logo{
+    display: flex;
+    align-items: flex-start;
+
+}
+
+.menu{
+    display: none;
+}
+.sobre-mim{
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    "title"
+    "description"
+    " skills"  ;
+    grid-template-columns: auto;
+    height: fit-content;
+    
+    
+}
+
+.section_title{
+    grid-area: title;
+}
+
+.description{
+    grid-area: description;
+}
+
+.skills{
+    grid-area: skills;
+}
+
+.skills__icons{
+   display: grid;
+   justify-content: space-between;
+   grid-template-columns: auto auto auto;
+}
+
+.section__title{
+    font-size: 100px;
+}
+
+.projetos{
+    margin-top: 60px;
+    display: flex;
+    height: fit-content;
+}
+
+.card__container{
+ margin-top: 40px;
+ align-items: center;
+ justify-content: center;
+
+
+}
+
+.contato{
+    display: grid;
+    grid-template-areas: 
+    "title title title"
+    "contatos social links";
+  
+}
+
+}
+
+@media(max-width: 300px){ 
+    .skills__icons{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+     }
+   
+}
+
+@media(max-width: 1133px)and (min-width: 779px){
+
+    .section__title{
+        font-size: 150px;
+    }
+
+
+}
