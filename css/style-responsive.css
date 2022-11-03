@@ -70,6 +70,8 @@
 }
 
 .card__container{
+    display: flex;
+    flex-direction: column;
  margin-top: 40px;
  align-items: center;
  justify-content: center;
@@ -77,16 +79,21 @@
 
 }
 
+.card__container img {
+    width: 672px;
+height: 420px;
+
+}
+
 .contato{
     width: 100%;
     display: grid;
     grid-template-areas: 
-    "title"
-    "contatos "
-    "social"
-    "links";
-    grid-template-columns: auto;
+    "title title title"
+    "contatos . links"
+    "social social social";
     height: fit-content;
+    margin-bottom: 150px;
 }
 
 .section_title{
@@ -105,10 +112,8 @@
 .social-container{
     margin-top: 40px;
     grid-area: social;
-    display: grid;
-    justify-content: space-between;
-    grid-template-columns: auto auto auto;
-   justify-self: center;
+    display: flex;
+    justify-self: center;
  }
 
 .links-container{ 
@@ -123,6 +128,27 @@ footer{
 
 }
 
+@media(max-width: 690px){
+    .contato{
+        width: 100%;
+        display: grid;
+        grid-template-areas: 
+        "title "
+        "contatos"
+        "social"
+        "links";
+        height: fit-content;
+        margin-bottom: 150px;
+    }
+    .social-container{
+        margin-top: 40px;
+        grid-area: social;
+        display: flex;
+        justify-self: center;
+     }
+    }
+}
+
 
 @media(max-width: 450px){ 
 .social-container{
@@ -130,10 +156,17 @@ footer{
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
-
+ 
+}
 }
 
-@media(max-width: 300px){ 
+@media(max-width: 320px){ 
+    .contato .section__title{
+        display: grid;
+        justify-items: center;
+        font-size: 3rem;
+    }
+
     .skills__icons{
         display: flex;
         flex-direction: column;
@@ -151,5 +184,4 @@ footer{
 
 
 }
-
-}
+}}
