@@ -78,12 +78,58 @@
 }
 
 .contato{
+    width: 100%;
     display: grid;
     grid-template-areas: 
-    "title title title"
-    "contatos social links";
-  
+    "title"
+    "contatos "
+    "social"
+    "links";
+    grid-template-columns: auto;
+    height: fit-content;
 }
+
+.section_title{
+    grid-area: title;
+}
+
+
+.contato-container{
+    margin-top: 40px;      
+    grid-area: contatos;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.social-container{
+    margin-top: 40px;
+    grid-area: social;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: auto auto auto;
+   justify-self: center;
+ }
+
+.links-container{ 
+    grid-area: links ;
+    align-items: center;
+    justify-content: center;
+}
+
+footer{
+    grid-area: content;
+    place-self: end center;
+
+}
+
+
+@media(max-width: 450px){ 
+.social-container{
+    display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
 
 }
 
@@ -103,5 +149,7 @@
         font-size: 150px;
     }
 
+
+}
 
 }
